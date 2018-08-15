@@ -1,0 +1,26 @@
+<ion-header>
+	<ion-navbar>
+		<ion-title>
+			Histórico de vento
+		</ion-title>
+	</ion-navbar>
+</ion-header>
+<ion-content padding id="page21">
+	<ion-list id="histRicoDeVento-list7" *ngFor="let vento of ventos">
+		<ion-item id="histRicoDeVento-list-item-container23">
+			<div id="histRicoDeVento-markdown38" class="show-list-numbers-and-dots">
+				<p style="margin-top:0px;color:#000000;">
+					{{vento.data}} - {{vento.valor}} km/h em média
+				</p>
+			</div>
+		</ion-item>
+	</ion-list>
+	<button id="histRicoDeVento-button3" ion-button color="positive" block icon-left on-click="buscar()">
+		<ion-icon name="refresh"></ion-icon>
+		Atualizar
+	</button>
+	<button id="histRicoDeVento-button12" ion-button color="positive" block icon-left on-click="goToVento()">
+		<ion-icon name="arrow-round-back"></ion-icon>
+		Retornar
+	</button>
+</ion-content>

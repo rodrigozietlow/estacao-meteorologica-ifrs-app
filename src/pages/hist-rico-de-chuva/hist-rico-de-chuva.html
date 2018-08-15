@@ -1,0 +1,26 @@
+<ion-header>
+	<ion-navbar>
+		<ion-title>
+			Histórico de chuva
+		</ion-title>
+	</ion-navbar>
+</ion-header>
+<ion-content padding id="page13">
+	<ion-list id="histRicoDeChuva-list3" *ngFor="let chuva of chuvas">
+		<ion-item id="histRicoDeChuva-list-item-container7">
+			<div id="histRicoDeChuva-markdown14" class="show-list-numbers-and-dots">
+				<p style="margin-top:0px;color:#000000;">
+					{{chuva.data}} - {{chuva.valor}} mm em média
+				</p>
+			</div>
+		</ion-item>
+	</ion-list>
+	<button id="histRicoDeChuva-button3" ion-button color="positive" block icon-left on-click="buscar()">
+		<ion-icon name="refresh"></ion-icon>
+		Atualizar
+	</button>
+	<button id="histRicoDeChuva-button4" ion-button color="positive" block icon-left on-click="goToChuva()">
+		<ion-icon name="arrow-round-back"></ion-icon>
+		Retornar
+	</button>
+</ion-content>

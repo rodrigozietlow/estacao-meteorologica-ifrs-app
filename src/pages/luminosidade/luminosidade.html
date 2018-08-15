@@ -1,0 +1,41 @@
+<ion-header>
+	<ion-navbar>
+		<ion-title>
+			Luminosidade
+		</ion-title>
+	</ion-navbar>
+</ion-header>
+<ion-content padding id="page18">
+	<h1 id="luminosidade-heading5" style="color:#000000;text-align:center;">
+		Luminosidade
+	</h1>
+	<div id="luminosidade-markdown30" style="text-align:center;" class="show-list-numbers-and-dots">
+		<p style="color:#000000;font-size:28px;">
+			{{atual?.valor}} lm
+		</p>
+	</div>
+	<div id="luminosidade-markdown11" class="show-list-numbers-and-dots">
+		<p style="color:#000000;">
+			Medição realizada em:
+			<strong>
+				{{atual?.data}}
+			</strong>
+		</p>
+	</div>
+	<div id="luminosidade-markdown11" class="show-list-numbers-and-dots" *ngIf="(media)?.valor">
+		<p style="color:#000000;">
+			Média de hoje até o momento:
+			<strong>
+				{{media.valor}} lm
+			</strong>
+		</p>
+	</div>
+	<button id="luminosidade-button2" ion-button color="positive" block icon-left on-click="atualizar()">
+		<ion-icon name="refresh"></ion-icon>
+		Atualizar
+	</button>
+	<button id="luminosidade-button9" ion-button color="positive" block icon-left on-click="goToHistRicoDeLuminosidade()">
+		<ion-icon name="list"></ion-icon>
+		Ver histórico
+	</button>
+</ion-content>

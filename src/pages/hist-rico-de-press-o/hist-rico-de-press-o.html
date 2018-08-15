@@ -1,0 +1,26 @@
+<ion-header>
+	<ion-navbar>
+		<ion-title>
+			Histórico de pressão
+		</ion-title>
+	</ion-navbar>
+</ion-header>
+<ion-content padding id="page17">
+	<ion-list id="histRicoDePressO-list5" *ngFor="let pressao of pressoes">
+		<ion-item id="histRicoDePressO-list-item-container15">
+			<div id="histRicoDePressO-markdown26" class="show-list-numbers-and-dots">
+				<p style="margin-top:0px;color:#000000;">
+					{{pressao.data}} - {{pressao.valor}} hPa em média
+				</p>
+			</div>
+		</ion-item>
+	</ion-list>
+	<button id="histRicoDePressao-button3" ion-button color="positive" block icon-left on-click="buscar()">
+		<ion-icon name="refresh"></ion-icon>
+		Atualizar
+	</button>
+	<button id="histRicoDePressO-button8" ion-button color="positive" block icon-left on-click="goToPressO()">
+		<ion-icon name="arrow-round-back"></ion-icon>
+		Retornar
+	</button>
+</ion-content>

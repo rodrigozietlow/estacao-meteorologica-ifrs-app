@@ -1,0 +1,14 @@
+{
+  "name": "App",
+  "app_id": "",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+	},
+	"proxies": [
+		{
+			"path" : "*/~rodrigo/API_Clima/",
+			"proxyUrl" : "http://localhost:80/"
+		}
+	]
+}

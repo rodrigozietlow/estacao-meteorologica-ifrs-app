@@ -1,0 +1,41 @@
+<ion-header>
+	<ion-navbar>
+		<ion-title>
+			Pressão
+		</ion-title>
+	</ion-navbar>
+</ion-header>
+<ion-content padding id="page16">
+	<h1 id="pressO-heading4" style="color:#000000;text-align:center;">
+		Pressão
+	</h1>
+	<div id="pressO-markdown24" style="text-align:center;" class="show-list-numbers-and-dots">
+		<p style="color:#000000;font-size:28px;">
+			{{atual?.valor}} hPa
+		</p>
+	</div>
+	<div id="pressao-markdown11" class="show-list-numbers-and-dots">
+		<p style="color:#000000;">
+			Medição realizada em:
+			<strong>
+				{{atual?.data}}
+			</strong>
+		</p>
+	</div>
+	<div id="pressao-markdown11" class="show-list-numbers-and-dots" *ngIf="(media)?.valor">
+		<p style="color:#000000;">
+			Média de hoje até o momento:
+			<strong>
+				{{media.valor}} hPa
+			</strong>
+		</p>
+	</div>
+	<button id="pressao-button2" ion-button color="positive" block icon-left on-click="atualizar()">
+		<ion-icon name="refresh"></ion-icon>
+		Atualizar
+	</button>
+	<button id="pressO-button7" ion-button color="positive" block icon-left on-click="goToHistRicoDePressO()">
+		<ion-icon name="list"></ion-icon>
+		Ver histórico
+	</button>
+</ion-content>

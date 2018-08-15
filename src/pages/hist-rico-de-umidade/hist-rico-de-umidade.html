@@ -1,0 +1,26 @@
+<ion-header>
+	<ion-navbar>
+		<ion-title>
+			Histórico de umidade
+		</ion-title>
+	</ion-navbar>
+</ion-header>
+<ion-content padding id="page15">
+	<ion-list id="histRicoDeUmidade-list4" *ngFor="let umidade of umidades">
+		<ion-item id="histRicoDeUmidade-list-item-container11">
+			<div id="histRicoDeUmidade-markdown20" class="show-list-numbers-and-dots">
+				<p style="margin-top:0px;color:#000000;">
+					{{umidade.data}} - {{umidade.valor}}% em média
+				</p>
+			</div>
+		</ion-item>
+	</ion-list>
+	<button id="histRicoDeUmidade-button3" ion-button color="positive" block icon-left on-click="buscar()">
+		<ion-icon name="refresh"></ion-icon>
+		Atualizar
+	</button>
+	<button id="histRicoDeUmidade-button6" ion-button color="positive" block icon-left on-click="goToUmidade()">
+		<ion-icon name="arrow-round-back"></ion-icon>
+		Retornar
+	</button>
+</ion-content>

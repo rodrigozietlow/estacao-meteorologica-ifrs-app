@@ -1,0 +1,41 @@
+<ion-header>
+	<ion-navbar>
+		<ion-title>
+			Chuva
+		</ion-title>
+	</ion-navbar>
+</ion-header>
+<ion-content padding id="page12">
+	<h1 id="chuva-heading2" style="color:#000000;text-align:center;">
+		Chuva
+	</h1>
+	<div id="chuva-markdown12" style="text-align:center;" class="show-list-numbers-and-dots">
+		<p style="color:#000000;font-size:28px;">
+			{{atual?.valor}}mm
+		</p>
+	</div>
+	<div id="chuva-markdown11" class="show-list-numbers-and-dots">
+		<p style="color:#000000;">
+			Medição realizada em:
+			<strong>
+				{{atual?.data}}
+			</strong>
+		</p>
+	</div>
+	<div id="chuva-markdown11" class="show-list-numbers-and-dots" *ngIf="(media)?.valor">
+		<p style="color:#000000;">
+			Média de hoje até o momento:
+			<strong>
+				{{media.valor}}mm
+			</strong>
+		</p>
+	</div>
+	<button id="chuva-button2" ion-button color="positive" block icon-left on-click="atualizar()">
+		<ion-icon name="refresh"></ion-icon>
+		Atualizar
+	</button>
+	<button id="chuva-button3" ion-button color="positive" block icon-left on-click="goToHistRicoDeChuva()">
+		<ion-icon name="list"></ion-icon>
+		Ver histórico
+	</button>
+</ion-content>

@@ -1,0 +1,41 @@
+<ion-header>
+	<ion-navbar>
+		<ion-title>
+			Temperatura
+		</ion-title>
+	</ion-navbar>
+</ion-header>
+<ion-content padding id="page5">
+	<h1 id="temperatura-heading1" style="color:#000000;text-align:center;">
+		Temperatura atual
+	</h1>
+	<div id="temperatura-markdown3" style="text-align:center;" class="show-list-numbers-and-dots">
+		<p style="color:#000000;font-size:28px;">
+			{{temperaturaAtual?.valor}}º C
+		</p>
+	</div>
+	<div id="temperatura-markdown11" class="show-list-numbers-and-dots">
+		<p style="color:#000000;">
+			Medição realizada em:
+			<strong>
+				{{temperaturaAtual?.data}}
+			</strong>
+		</p>
+	</div>
+	<div id="temperatura-markdown11" class="show-list-numbers-and-dots" *ngIf="(mediaAtual)?.valor">
+		<p style="color:#000000;">
+			Média de hoje até o momento:
+			<strong>
+				{{mediaAtual.valor}}ºC
+			</strong>
+		</p>
+	</div>
+	<button id="temperatura-button2" ion-button color="positive" block icon-left on-click="atualizarTemperatura()">
+		<ion-icon name="refresh"></ion-icon>
+		Atualizar
+	</button>
+	<button id="temperatura-button1" ion-button color="positive" block icon-left on-click="goToHistRicoDeTemperatura()">
+		<ion-icon name="list"></ion-icon>
+		Ver histórico
+	</button>
+</ion-content>

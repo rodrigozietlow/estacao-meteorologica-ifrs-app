@@ -1,0 +1,26 @@
+<ion-header>
+	<ion-navbar>
+		<ion-title>
+			Histórico de temperatura
+		</ion-title>
+	</ion-navbar>
+</ion-header>
+<ion-content padding id="page11">
+	<ion-list id="histRicoDeTemperatura-list2" *ngFor="let temperatura of temperaturas">
+		<ion-item id="histRicoDeTemperatura-list-item-container3">
+			<div id="histRicoDeTemperatura-markdown7" class="show-list-numbers-and-dots">
+				<p style="margin-top:0px;color:#000000;">
+					{{temperatura.data}} - {{temperatura.valor}}ºC em média
+				</p>
+			</div>
+		</ion-item>
+	</ion-list>
+	<button id="histRicoDeTemperatura-button3" ion-button color="positive" block icon-left on-click="buscar()">
+		<ion-icon name="refresh"></ion-icon>
+		Atualizar
+	</button>
+	<button id="histRicoDeTemperatura-button2" ion-button color="positive" block icon-left on-click="goToTemperatura()">
+		<ion-icon name="arrow-round-back"></ion-icon>
+		Retornar
+	</button>
+</ion-content>

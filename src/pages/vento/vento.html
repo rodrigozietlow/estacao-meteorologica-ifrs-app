@@ -1,0 +1,41 @@
+<ion-header>
+	<ion-navbar>
+		<ion-title>
+			Vento
+		</ion-title>
+	</ion-navbar>
+</ion-header>
+<ion-content padding id="page20">
+	<h1 id="vento-heading6" style="color:#000000;text-align:center;">
+		Vento
+	</h1>
+	<div id="vento-markdown36" style="text-align:center;" class="show-list-numbers-and-dots">
+		<p style="color:#000000;font-size:28px;">
+			{{atual?.valor}} km/h
+		</p>
+	</div>
+	<div id="vento-markdown11" class="show-list-numbers-and-dots">
+		<p style="color:#000000;">
+			Medição realizada em:
+			<strong>
+				{{atual?.data}}
+			</strong>
+		</p>
+	</div>
+	<div id="vento-markdown11" class="show-list-numbers-and-dots" *ngIf="(media)?.valor">
+		<p style="color:#000000;">
+			Média de hoje até o momento:
+			<strong>
+				{{media.valor}} km/h
+			</strong>
+		</p>
+	</div>
+	<button id="vento-button2" ion-button color="positive" block icon-left on-click="atualizar()">
+		<ion-icon name="refresh"></ion-icon>
+		Atualizar
+	</button>
+	<button id="vento-button11" ion-button color="positive" block icon-left on-click="goToHistRicoDeVento()">
+		<ion-icon name="list"></ion-icon>
+		Ver histórico
+	</button>
+</ion-content>

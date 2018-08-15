@@ -1,0 +1,26 @@
+<ion-header>
+	<ion-navbar>
+		<ion-title>
+			Histórico de luminosidade
+		</ion-title>
+	</ion-navbar>
+</ion-header>
+<ion-content padding id="page19">
+	<ion-list id="histRicoDeLuminosidade-list6" *ngFor="let luminosidade of luminosidades">
+		<ion-item id="histRicoDeLuminosidade-list-item-container19">
+			<div id="histRicoDeLuminosidade-markdown32" class="show-list-numbers-and-dots">
+				<p style="margin-top:0px;color:#000000;">
+					{{luminosidade.data}} - {{luminosidade.valor}} lm em média
+				</p>
+			</div>
+		</ion-item>
+	</ion-list>
+	<button id="histRicoDeLuminosidade-button3" ion-button color="positive" block icon-left on-click="buscar()">
+		<ion-icon name="refresh"></ion-icon>
+		Atualizar
+	</button>
+	<button id="histRicoDeLuminosidade-button10" ion-button color="positive" block icon-left on-click="goToLuminosidade()">
+		<ion-icon name="arrow-round-back"></ion-icon>
+		Retornar
+	</button>
+</ion-content>

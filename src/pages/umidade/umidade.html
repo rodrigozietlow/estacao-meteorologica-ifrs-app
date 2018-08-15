@@ -1,0 +1,41 @@
+<ion-header>
+	<ion-navbar>
+		<ion-title>
+			Umidade
+		</ion-title>
+	</ion-navbar>
+</ion-header>
+<ion-content padding id="page14">
+	<h1 id="umidade-heading3" style="color:#000000;text-align:center;">
+		Umidade
+	</h1>
+	<div id="umidade-markdown18" style="text-align:center;" class="show-list-numbers-and-dots">
+		<p style="color:#000000;font-size:28px;">
+			{{atual?.valor}}%
+		</p>
+	</div>
+	<div id="umidade-markdown11" class="show-list-numbers-and-dots">
+		<p style="color:#000000;">
+			Medição realizada em:
+			<strong>
+				{{atual?.data}}
+			</strong>
+		</p>
+	</div>
+	<div id="umidade-markdown11" class="show-list-numbers-and-dots" *ngIf="(media)?.valor">
+		<p style="color:#000000;">
+			Média de hoje até o momento:
+			<strong>
+				{{media.valor}}%
+			</strong>
+		</p>
+	</div>
+	<button id="umidade-button2" ion-button color="positive" block icon-left on-click="atualizar()">
+		<ion-icon name="refresh"></ion-icon>
+		Atualizar
+	</button>
+	<button id="umidade-button5" ion-button color="positive" block icon-left on-click="goToHistRicoDeUmidade()">
+		<ion-icon name="list"></ion-icon>
+		Ver histórico
+	</button>
+</ion-content>
